@@ -1,0 +1,45 @@
+.beat-player {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    padding-left: 10px;
+}
+
+.beat-image {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.beat-image img {
+    width: 70%;
+    height: auto;
+    border-radius: 50%;
+    animation: rotate 4s linear infinite;
+}
+
+.play-btn {
+    width: 40px;
+    height: 40px;
+    background-color: #ffeb66;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+}
+
+.play-btn i {
+    color: #474747;
+    font-size: 24px;
+}
+
+.pause-icon,
+.play-icon {
+    color: #474747;
+    font-size: 24px;
+}

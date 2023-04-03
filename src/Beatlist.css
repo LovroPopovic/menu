@@ -1,3 +1,4 @@
+/* Styles for the list */
 .beatlist-container {
     margin: 3px;
     height: 370px;
@@ -28,7 +29,6 @@
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-
 .beat-item:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
@@ -57,71 +57,4 @@
     100% {
         transform: rotateZ(360deg);
     }
-}
-
-.beat-info {
-    width: 45%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 10px;
-}
-
-
-.beat-title {
-    font-size: 12px;
-    font-weight: bold;
-    color: #FFEB66;
-    margin-bottom: 5px;
-}
-
-.beat-author {
-    font-size: 8px;
-    font-weight: bold;
-    color: #FFEB66;
-    margin-bottom: 5px;
-}
-
-
-.beat-length,
-.beat-genre,
-.beat-bpm,
-.beat-price {
-    font-size: 8px;
-    color: #fff;
-    margin-bottom: 1px;
-}
-
-
-.beat-player {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 20%;
-    height: 100%;
-    padding-left: 10px;
-}
-
-.play-btn {
-    width: 40px;
-    height: 40px;
-    background-color: #ffeb66;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
-}
-
-.play-btn i {
-    color: #474747;
-    font-size: 24px;
-}
-
-.pause-icon,
-.play-icon {
-    color: #474747;
-    font-size: 24px;
 }

@@ -1,12 +1,12 @@
-import React, { useState, useRef } from 'react';
-import "./Beatlist.css"
+import React, { useState, useRef, useCallback } from 'react';
+import "./Beatplayer.css"
 import { FaPlay, FaPause } from 'react-icons/fa';
 
 const BeatPlayer = ({ title, artist, imageUrl, audioUrl }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef();
 
-  const handlePlayPause = () => {
+  const handlePlayPause = useCallback(() => {
     if (isPlaying) {
       audioRef.current.pause();
       setIsPlaying(false);
@@ -14,7 +14,7 @@ const BeatPlayer = ({ title, artist, imageUrl, audioUrl }) => {
       audioRef.current.play();
       setIsPlaying(true);
     }
-  };
+  }, [isPlaying, audioRef]);
 
   return (
     <div className="beat-player-container">
@@ -26,7 +26,7 @@ const BeatPlayer = ({ title, artist, imageUrl, audioUrl }) => {
         <div className="beat-author">{artist}</div>
       </div>
       <div className="beat-player-controls">
-        <audio ref={audioRef} src={audioUrl} />
+      <audio ref={audioRef} src={audioUrl} preload="none" />
         <div className="play-btn" onClick={handlePlayPause}>
           {isPlaying ? (
             <FaPause className="pause-icon" />
