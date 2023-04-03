@@ -17,21 +17,23 @@ const BeatPlayer = ({ title, artist, imageUrl, audioUrl }) => {
   };
 
   return (
-    <div className="beat-player">
-      <div className="beat-image">
-        <img src={imageUrl} alt={title} />
+    <div className="beat-player-container">
+      <div className="beat-image-container">
+        <img src={imageUrl} alt={title} className="beat-image" />
       </div>
-      <div className="beat-info">
+      <div className="beat-info-container">
         <div className="beat-title">{title}</div>
-        <div className="beat-artist">{artist}</div>
+        <div className="beat-author">{artist}</div>
       </div>
-      <div className="beat-controls">
+      <div className="beat-player-controls">
         <audio ref={audioRef} src={audioUrl} />
-        {isPlaying ? (
-          <FaPause className="pause-icon" onClick={handlePlayPause} />
-        ) : (
-          <FaPlay className="play-icon" onClick={handlePlayPause} />
-        )}
+        <div className="play-btn" onClick={handlePlayPause}>
+          {isPlaying ? (
+            <FaPause className="pause-icon" />
+          ) : (
+            <FaPlay className="play-icon" />
+          )}
+        </div>
       </div>
     </div>
   );

@@ -1,35 +1,41 @@
 .beatlist-container {
-    margin: 30px;
-    background-color: #474747;
+    margin: 3px;
+    height: 370px;
+    width: 600px;
+    background-color: #2b2b2b;
 }
 
 .beatlist-scroll {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    grid-gap: 10px;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
 }
-
 
 .beat-item {
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 3px;
     width: 100%;
-    height: 150px;
-    border-radius: 100px;
-    background-color: #ffeb66;
+    height: 100%;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: #2B2B2B;
     overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 
 .beat-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 }
 
 .beat-image {
-    width: 30%;
+    width: 35%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -37,7 +43,7 @@
 }
 
 .beat-image img {
-    width: 80%;
+    width: 70%;
     height: auto;
     border-radius: 50%;
     animation: rotate 4s linear infinite;
@@ -54,59 +60,68 @@
 }
 
 .beat-info {
-    width: 70%;
+    width: 45%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    padding: 0 20px;
+    justify-content: center;
+    padding: 0 10px;
 }
 
+
 .beat-title {
-    font-size: 30px;
+    font-size: 12px;
     font-weight: bold;
-    color: #fff;
-    margin-bottom: 10px;
+    color: #FFEB66;
+    margin-bottom: 5px;
 }
 
 .beat-author {
-    font-size: 24px;
+    font-size: 8px;
     font-weight: bold;
-    color: #fff;
+    color: #FFEB66;
+    margin-bottom: 5px;
 }
 
-.beat-length {
-    font-size: 18px;
-    color: #fff;
-}
 
-.beat-genre {
-    font-size: 18px;
-    color: #fff;
-}
-
-.beat-bpm {
-    font-size: 18px;
-    color: #fff;
-}
-
+.beat-length,
+.beat-genre,
+.beat-bpm,
 .beat-price {
-    font-size: 18px;
+    font-size: 8px;
     color: #fff;
-    font-weight: bold;
+    margin-bottom: 1px;
 }
+
 
 .beat-player {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    width: 30%;
-    height: 80%;
-    padding: 10px;
+    width: 20%;
+    height: 100%;
+    padding-left: 10px;
 }
 
-@media screen and (max-width: 768px) {
-    .beat-item {
-        width: 90%;
-    }
+.play-btn {
+    width: 40px;
+    height: 40px;
+    background-color: #ffeb66;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.play-btn i {
+    color: #474747;
+    font-size: 24px;
+}
+
+.pause-icon,
+.play-icon {
+    color: #474747;
+    font-size: 24px;
 }
